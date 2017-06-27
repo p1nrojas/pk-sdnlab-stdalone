@@ -6,7 +6,6 @@ if [ ! -f /var/log/ansible/ansible-pk-sdnlab-stdalone.log ]; then
     touch /var/log/ansible/ansible-pk-sdnlab-stdalone.log
     ssh-keygen -t rsa -b 4096 -C "dev@nuage.io" -f ~/.ssh/id_rsa -q -N ""
     cd /home/dev/pk-sdnlab-stdalone
-    ansible-playbook build.yml
     /bin/bash
 else
     echo "Caution: user data detected. skipping setup. Next time override CMD"
